@@ -1,0 +1,272 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+}
+
+/* HEADER */
+
+#LOGO-MAIN {
+    position: fixed;
+    scale: 25%;
+    top: -50px;
+    left: -320px;
+    z-index: 1;
+    mix-blend-mode: difference;
+}
+
+#LOGO-MAIN:hover {
+    mix-blend-mode: initial;
+}
+
+@media (max-width: 450px) {
+    #LOGO-MAIN {
+        position: absolute;
+        scale: 20%;
+        top: -70px;
+        left: -350px;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+nav {
+    height: 60px;
+    background: transparent;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    position: fixed;
+    top: 0;
+    color: white;
+    right: 0;
+    z-index: 10;
+    mix-blend-mode: difference;
+}
+
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: right;
+    color: white;
+    align-items: center;
+    margin-right: 30px;
+}
+
+nav a {
+    height: 100%;
+    padding: 55px 20px 0 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    mix-blend-mode: difference;
+    font-family: 'Druk Trial', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+nav svg {
+    fill: white;
+    mix-blend-mode: difference;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+    display: none;
+}
+
+@media(max-width: 650px) {
+    .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 250px;
+
+        background-color: white;
+        transition: 0.75s ease-out;
+        margin-right: 0;
+    }
+
+    nav {
+        mix-blend-mode: inherit;
+    }
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 0 30px;
+        justify-content: flex-start;
+        opacity: 1;
+        mix-blend-mode: none;
+    }
+
+    .open-sidebar-button, .close-sidebar-button {
+        padding: 20px;
+        padding-top: 50px;
+        display: block;
+        mix-blend-mode: difference;
+    }
+
+    #sidebar-active:checked ~ .links-container {
+        right: 0;
+        padding-top: 0px;
+    }
+}
+
+@media(max-width: 450px) {
+    .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 250px;
+
+        background-color: white;
+        transition: 0.75s ease-out;
+        margin-right: 0;
+    }
+
+    nav {
+        mix-blend-mode: inherit;
+    }
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 0 30px 25px;
+        justify-content: flex-start;
+        mix-blend-mode: none;
+        opacity: 1;
+        font-size: 38px;
+
+    }
+
+    nav a:hover {
+        text-decoration: none;
+    }
+
+    .open-sidebar-button, .close-sidebar-button {
+        padding: 20px;
+        padding-top: 25px;
+        display: block;
+    }
+
+    #sidebar-active:checked ~ .links-container {
+        right: 0;
+        padding-top: 0px;
+    }
+}
+
+/* CONTACT FORM 
+
+#contact_form {
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 175px;
+    margin-left: 100px;
+    }
+  .row label{
+    color: #FFFFFF;
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-family: "Druk Trial";
+    margin-left: 10px;
+  }
+
+  input[type=text], textarea {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: white;
+    border-color: white;
+    margin: auto 0;
+    color: black;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+    font-family: "Druk Trial", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 30px;
+    }
+
+    #message {
+        width: 800px;
+    }
+
+  input[type=text] {
+    height: 45px;
+    padding-left: 10px;
+  }
+  input[type=submit] {
+    background-color: transparent;
+    color: white;
+    font-size: 35px;
+    font-family: "Druk Trial";
+    margin-left: 10px;
+    width: 100px;
+  }
+
+  input[type=submit]:hover {
+    cursor: pointer;
+  } */
+
+.formmy {
+    margin-top: -50px;
+}
+
+@media(max-width: 450px) {
+    .formmy {
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+}
+
+@media(orientation: landscape) {
+    .formmy {
+        margin-top: 125px;
+    }
+}
+
+/* FOOTER */
+footer {
+    font-family: "Druk-Trial", sans-serif;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: auto;
+    pointer-events: none;
+
+}
